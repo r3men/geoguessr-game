@@ -12,7 +12,7 @@ export default function Home() {
             GEO<span className="text-emerald-400">DUEL</span>
           </h1>
           <p className="text-zinc-400 text-lg mt-4">
-            Upload street view images. Guess the country. Beat the AI.
+            Upload street view images from <span className="text-white font-bold">USA, Japan, Brazil or Russia</span>. Guess the country. Beat the AI.
           </p>
         </div>
 

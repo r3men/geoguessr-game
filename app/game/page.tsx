@@ -93,7 +93,7 @@ export default function GamePage() {
             <h1 className="text-4xl font-black">
               GEO<span className="text-emerald-400">DUEL</span>
             </h1>
-            <p className="text-zinc-400 mt-1">Upload images to start a game</p>
+            <p className="text-zinc-400 mt-1">Upload images from <span className="text-emerald-400 font-bold">USA, Japan, Brazil or Russia</span> only</p>
           </div>
 
           {/* Name input */}

@@ -14,6 +14,7 @@ export type RoundResult = {
   correctCountry: string;
   userCorrect: boolean;
   aiCorrect: boolean;
+  saliencyImage: string;
 };
 
 const COUNTRIES = ["United States", "Japan", "Brazil", "Russia"];
@@ -72,6 +73,7 @@ export default function GamePage() {
       correctCountry: current.country,
       userCorrect: userGuess === current.country,
       aiCorrect: data.prediction === current.country,
+      saliencyImage: data.saliency_image,
     };
 
     const newResults = [...results, result];

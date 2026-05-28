@@ -59,7 +59,17 @@ export default function ResultsScreen({ results, playerName, onPlayAgain, onLead
           <h3 className="font-bold text-zinc-300">Round Breakdown</h3>
           {results.map((r, i) => (
             <div key={i} className="bg-zinc-900 rounded-xl p-4 border border-zinc-800 flex gap-4">
-              <img src={r.imageUrl} className="w-24 h-16 object-cover rounded-lg flex-shrink-0" />
+              <div className="flex flex-col gap-1 flex-shrink-0">
+                <img src={r.imageUrl} className="w-24 h-16 object-cover rounded-lg" />
+                {r.saliencyImage && (
+                  <div className="relative">
+                    <img src={r.saliencyImage} className="w-24 h-16 object-cover rounded-lg" />
+                    <span className="absolute bottom-1 left-1 text-white text-xs bg-black/60 px-1 rounded">
+                      AI focus
+                    </span>
+                  </div>
+                )}
+              </div>
               <div className="flex-1 min-w-0">
                 <p className="text-sm text-zinc-400 mb-2">
                   Answer: <span className="text-white font-bold">{r.correctCountry}</span>
